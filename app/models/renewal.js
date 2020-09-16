@@ -17,10 +17,6 @@ const renewalSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  comments: {
-    type: String,
-    required: true
-  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
