@@ -1,5 +1,41 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+### Perennial: Renewals Tracking App
+
+Perrinial is a singal page application designed for keeping track of a user's upcoming monthly or yearly renewals.
+
+## Setup Steps:
+
+- Fork and clone this repository.
+- Run install command to install all dependencies
+- Use start command to spin up the server.
+
+## Important Links:
+- Other Repo
+- Deployed API
+- Deployed Client
+
+## Planning Story:
+Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin coffee williamsburg af poutine fingerstache austin semiotics paleo man braid vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats shoreditch try-hard health goth intelligentsia pop-up small batch skateboard farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle tofu.
+
+## User Stories:
+- As a user I want to sign in/up
+- As a user I want to Create a new renewal
+- As a user I want to View multiple renewals
+- As a user I want to View a single renewal
+- As a user I want to Update a renewal I own
+- As a user I want to Delete a renewal I own
+- As a user I want to be able to comment on renewals I own
+- As a user I want to see an expiration countdown on each renewal
+
+## Technologies Used:
+Express
+HTML/CSS
+Bootstrap
+Javascript
+MongoDB
+Mongoose
+
 ## Tasks
 
 Instead of `grunt`, this template uses `npm` as a task runner. This is more
@@ -142,10 +178,9 @@ Response:
 ```md
 HTTP/1.1 204 No Content
 ```
+## Unsolved Problems:
 
-## [License](LICENSE)
+## Images
 
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
-# Perennial-api
+#### Wireframe:
+- [Perennial ERD]('Perennial-Renewals-ERD.jpg')
