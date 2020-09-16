@@ -13,6 +13,10 @@ const renewalSchema = new mongoose.Schema({
     type: Date,
     required: true
   },
+  cost: {
+    type: Number,
+    required: true
+  },
   url: {
     type: String,
     required: true

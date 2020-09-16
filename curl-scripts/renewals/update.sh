@@ -13,6 +13,7 @@ curl "${API}${URL_PATH}/${ID}" \
       "name": "'"${NAME}"'",
       "type": "'"${TYPE}"'",
       "date": "'"${DATE}"'",
+      "cost": "'"${COST}"'",
       "url": "'"${URL}"'"
     }
   }'
