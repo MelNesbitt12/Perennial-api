@@ -2,7 +2,9 @@
 
 ### Perennial: Renewals Tracking App
 
-Perrinial is a singal page application designed for keeping track of a user's upcoming monthly or yearly renewals.
+Perennial is a single page application designed for keeping track of a user's upcoming monthly or yearly renewals.
+
+I came up with the idea for Perennial after my husband and I realized our car registration was expired...by almost a year. It got me thinking about all of the subscriptions, plans, etc. that we have to keep track of and how tough it can be to keep it all straight. I wanted to create a user-friendly application that store all of the data a user might need about their renewals, including expiration dates, comments, and instructions on each individual renewal.
 
 ## Setup Steps:
 
@@ -11,12 +13,12 @@ Perrinial is a singal page application designed for keeping track of a user's up
 - Use start command to spin up the server.
 
 ## Important Links:
-- Other Repo
+- [Perennial Client Repository](https://github.com/MelNesbitt12/Perennial-client)
 - Deployed API
 - Deployed Client
 
 ## Planning Story:
-Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin coffee williamsburg af poutine fingerstache austin semiotics paleo man braid vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats shoreditch try-hard health goth intelligentsia pop-up small batch skateboard farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle tofu.
+
 
 ## User Stories:
 - As a user I want to sign in/up
@@ -29,12 +31,12 @@ Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin cof
 - As a user I want to see an expiration countdown on each renewal
 
 ## Technologies Used:
-Express
-HTML/CSS
-Bootstrap
-Javascript
-MongoDB
-Mongoose
+- Express
+- HTML/CSS
+- Bootstrap
+- Javascript
+- MongoDB
+- Mongoose
 
 ## Tasks
 
@@ -183,4 +185,4 @@ HTTP/1.1 204 No Content
 ## Images
 
 #### Wireframe:
-- [Perennial ERD]('Perennial-Renewals-ERD.jpg')
+- [Perennial ERD](https://imgur.com/a/pD9ziPI)
