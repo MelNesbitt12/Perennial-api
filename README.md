@@ -184,5 +184,5 @@ HTTP/1.1 204 No Content
 
 ## Images
 
-#### Wireframe:
+#### ERD:
 - [Perennial ERD](https://imgur.com/a/pD9ziPI)
