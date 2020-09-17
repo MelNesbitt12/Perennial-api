@@ -14,7 +14,8 @@ curl "${API}${URL_PATH}" \
       "type": "'"${TYPE}"'",
       "date": "'"${DATE}"'",
       "cost": "'"${COST}"'",
-      "url": "'"${URL}"'"
+      "url": "'"${URL}"'",
+      "instructions": "'"${INSTRUCTIONS}"'"
     }
   }'
 

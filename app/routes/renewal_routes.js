@@ -34,7 +34,7 @@ router.get('/renewals', requireToken, (req, res, next) => {
   Renewal.find({ owner: owner })
     .sort('date')
     .then(renewals => {
-      // `examples` will be an array of Mongoose documents
+      // `renewals` will be an array of Mongoose documents
       // we want to convert each one to a POJO, so we use `.map` to
       // apply `.toObject` to each one
       return renewals.map(renewal => renewal.toObject())
@@ -50,6 +50,12 @@ router.get('/renewals', requireToken, (req, res, next) => {
 router.get('/renewals/:id', requireToken, (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Renewal.findById(req.params.id)
+    .then(renewal => {
+      if (renewal.date < Date.now) {
+        renewal.needsRenew = true
+      }
+      return renewal
+    })
     .then(handle404)
     // if `findById` is succesful, respond with 200 and "renewal" JSON
     .then(renewal => res.status(200).json({ renewal: renewal.toObject() }))
@@ -67,7 +73,9 @@ router.post('/renewals', requireToken, (req, res, next) => {
     // respond to succesful `create` with status 201 and JSON of new "renewal"
     .then(renewal => {
       res.status(201).json({ renewal: renewal.toObject() })
+      console.log(renewal)
     })
+
     // if an error occurs, pass it off to our error handler
     // the error handler needs the error message and the `res` object so that it
     // can send an error message back to the client
