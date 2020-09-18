@@ -1,5 +1,3 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
-
 ### Perennial: Renewals Tracking App
 
 Perennial is a single page application designed for keeping track of a user's upcoming monthly or yearly renewals.
@@ -9,8 +7,9 @@ I came up with the idea for Perennial after my husband and I realized our car re
 ## Setup Steps:
 
 - Fork and clone this repository.
-- Run install command to install all dependencies
-- Use start command to spin up the server.
+- Create and checkout to a new branch to begin your work.
+- Run `npm install` to install all dependencies
+- Use `npm run server` to spin up the server.
 
 ## Important Links:
 - [Perennial Client Repository](https://github.com/MelNesbitt12/Perennial-client)
@@ -18,10 +17,18 @@ I came up with the idea for Perennial after my husband and I realized our car re
 - Deployed Client
 
 ## Planning Story:
+For this project, I wanted to be as organized as possible from the start, so I used smartsheet to make a list of all requirements I needed to meet in order to reach MVP, as well as a list of stretch goals/extras I wanted to incorporate if I had time. After creating and populating my smartsheet, I moved on to my ERD and wireframes, as well as user stories.
 
+I began by setting up both my front and back end repositories and using curl scripts to check authentication on both the front and back end. After confirming my curl scripts worked, I focused on the back end: creating my renewal resource and all its endpoints, testing my ability to CRUD the resource with curl scripts, and adding the relationship and ownership of the user to the renewal resource.
+
+Then I moved on to the front end: I created my resource, tested CRUD (create, update, delete, index and show) with curl scripts and in the browser, and made sure that all actions had success and failure messages associated with them.
+
+Styling came last - for this project, I wanted to continue to practice using Bootstrap, so I incorporated Cards and a Jumbotron. I also did most of my styling with inline CSS.
 
 ## User Stories:
 - As a user I want to sign in/up
+- As a user I want to be able to change my password
+- As a user I want to be able to log out
 - As a user I want to Create a new renewal
 - As a user I want to View multiple renewals
 - As a user I want to View a single renewal
@@ -40,9 +47,7 @@ I came up with the idea for Perennial after my husband and I realized our car re
 
 ## Tasks
 
-Instead of `grunt`, this template uses `npm` as a task runner. This is more
-conventional for modern Express apps, and it's handy because we'll definitely
-use `npm` anyway. These are the commands available:
+`npm` is used as a task runner for this project. These are the commands available:
 
 | Command                | Effect                                                                                                      |
 |------------------------|-------------------------------------------------------------------------------------------------------------|
@@ -50,16 +55,8 @@ use `npm` anyway. These are the commands available:
 | `npm test`             | Runs automated tests.                                                                                       |
 | `npm run debug-server` | Starts the server in debug mode, which will print lots of extra info about what's happening inside the app. |
 
-## API
+## API Authentication
 
-Use this as the basis for your own API documentation. Add a new third-level
-heading for your custom entities, and follow the pattern provided for the
-built-in user authentication documentation.
-
-Scripts are included in [`curl-scripts`](curl-scripts) to test built-in actions.
-Add your own scripts to test your custom API.
-
-### Authentication
 
 | Verb   | URI Pattern            | Controller#Action |
 |--------|------------------------|-------------------|
@@ -77,6 +74,7 @@ curl --include --request POST http://localhost:4741/sign-up \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
+      "username": "username",
       "email": "an@example.email",
       "password": "an example password",
       "password_confirmation": "an example password"
@@ -85,7 +83,7 @@ curl --include --request POST http://localhost:4741/sign-up \
 ```
 
 ```sh
-curl-scripts/sign-up.sh
+curl-scripts/auth/sign-up.sh
 ```
 
 Response:
@@ -97,7 +95,8 @@ Content-Type: application/json; charset=utf-8
 {
   "user": {
     "id": 1,
-    "email": "an@example.email"
+    "email": "an@example.email",
+    "username": "username"
   }
 }
 ```
@@ -111,14 +110,14 @@ curl --include --request POST http://localhost:4741/sign-in \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "email": "an@example.email",
+      "username": "username",
       "password": "an example password"
     }
   }'
 ```
 
 ```sh
-curl-scripts/sign-in.sh
+curl-scripts/auth/sign-in.sh
 ```
 
 Response:
@@ -130,7 +129,7 @@ Content-Type: application/json; charset=utf-8
 {
   "user": {
     "id": 1,
-    "email": "an@example.email",
+    "username": "username",
     "token": "33ad6372f795694b333ec5f329ebeaaa"
   }
 }
@@ -153,7 +152,7 @@ curl --include --request PATCH http://localhost:4741/change-password/ \
 ```
 
 ```sh
-TOKEN=33ad6372f795694b333ec5f329ebeaaa curl-scripts/change-password.sh
+TOKEN=33ad6372f795694b333ec5f329ebeaaa curl-scripts/auth/change-password.sh
 ```
 
 Response:
@@ -172,7 +171,7 @@ curl --include --request DELETE http://localhost:4741/sign-out/ \
 ```
 
 ```sh
-TOKEN=33ad6372f795694b333ec5f329ebeaaa curl-scripts/sign-out.sh
+TOKEN=33ad6372f795694b333ec5f329ebeaaa curl-scripts/auth/sign-out.sh
 ```
 
 Response:
@@ -181,8 +180,13 @@ Response:
 HTTP/1.1 204 No Content
 ```
 ## Unsolved Problems:
+Version 2:
+- I would like to create a subdocument within the Renewal model for comments.
+- I want users to be able to add hyperlinks (instead of just text links) to the `URL` section of the create renewal form, so that they can click the link from the show page and be taken straight to their subscription or service renewal page
+- I want to explore bootstrap styling and have my individual resource cards lay out side-by-side instead of stacked on the index page.
 
 ## Images
+- [Perennial App](https://imgur.com/a/gb9gkML)
 
 #### ERD:
 - [Perennial ERD](https://imgur.com/a/pD9ziPI)
