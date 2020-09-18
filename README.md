@@ -186,7 +186,7 @@ Version 2:
 - I want to explore bootstrap styling and have my individual resource cards lay out side-by-side instead of stacked on the index page.
 
 ## Images
-- [Perennial App](https://imgur.com/a/gb9gkML)
+![Perennial App](https://user-images.githubusercontent.com/59749085/93626999-4841fb00-f9b2-11ea-9071-871391b79d3d.png)
 
 #### ERD:
-- [Perennial ERD](https://imgur.com/a/pD9ziPI)
+![Perennial ERD](https://user-images.githubusercontent.com/59749085/93627672-462c6c00-f9b3-11ea-9ef0-f909103ab283.jpg)
