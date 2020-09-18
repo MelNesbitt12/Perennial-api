@@ -73,7 +73,6 @@ router.post('/renewals', requireToken, (req, res, next) => {
     // respond to succesful `create` with status 201 and JSON of new "renewal"
     .then(renewal => {
       res.status(201).json({ renewal: renewal.toObject() })
-      console.log(renewal)
     })
 
     // if an error occurs, pass it off to our error handler
