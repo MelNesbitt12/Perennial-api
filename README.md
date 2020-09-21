@@ -55,7 +55,7 @@ Styling came last - for this project, I wanted to continue to practice using Boo
 | `npm test`             | Runs automated tests.                                                                                       |
 | `npm run debug-server` | Starts the server in debug mode, which will print lots of extra info about what's happening inside the app. |
 
-## API Authentication
+## API Authentication Routes
 
 
 | Verb   | URI Pattern            | Controller#Action |
@@ -186,6 +186,7 @@ Version 2:
 - I want to explore bootstrap styling and have my individual resource cards lay out side-by-side instead of stacked on the index page.
 - I want to add mobile compatibility to the application.
 - I would like to adjust my User schema to include location and other pertinent information for the User's profile page.
+- I want to add an auto-renew field to the Renewal schema, that will be set to true/false.
 
 ## Images
 ![Perennial App](https://user-images.githubusercontent.com/59749085/93626999-4841fb00-f9b2-11ea-9071-871391b79d3d.png)
