@@ -11,10 +11,10 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
-  // address: {
-  //   type: String,
-  //   required: true
-  // },
+  location: {
+    type: String,
+    required: true
+  },
   hashedPassword: {
     type: String,
     required: true

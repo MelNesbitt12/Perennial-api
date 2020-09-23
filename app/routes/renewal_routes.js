@@ -105,14 +105,14 @@ router.patch('/renewals/:id/update', requireToken, removeBlanks, (req, res, next
 })
 
 // DESTROY
-// DELETE /examples/5a7db6c74d55bc51bdf39793
+// DELETE /renewals/5a7db6c74d55bc51bdf39793
 router.delete('/renewals/:id', requireToken, (req, res, next) => {
   Renewal.findById(req.params.id)
     .then(handle404)
     .then(renewal => {
-      // throw an error if current user doesn't own `example`
+      // throw an error if current user doesn't own `renewal`
       requireOwnership(req, renewal)
-      // delete the example ONLY IF the above didn't throw
+      // delete the renewal ONLY IF the above didn't throw
       renewal.deleteOne()
     })
     // send back 204 and no content if the deletion succeeded
