@@ -1,5 +1,7 @@
 ### Perennial: Renewals Tracking App
 
+![Perennial App](https://user-images.githubusercontent.com/59749085/94137755-ef9cb300-fe34-11ea-8230-bab4faf8a50f.png)
+
 Perennial is a single page application designed for keeping track of a user's upcoming monthly or yearly renewals.
 
 I came up with the idea for Perennial after my husband and I realized our car registration was expired...by almost a year. It got me thinking about all of the subscriptions, plans, etc. that we have to keep track of and how tough it can be to keep it all straight. I wanted to create a user-friendly application that store all of the data a user might need about their renewals, including expiration dates, comments, and instructions on each individual renewal.
@@ -182,14 +184,10 @@ HTTP/1.1 204 No Content
 ## Unsolved Problems:
 Version 2:
 - I would like to create a subdocument within the Renewal model for comments.
-- I want users to be able to add hyperlinks (instead of just text links) to the `URL` section of the create renewal form, so that they can click the link from the show page and be taken straight to their subscription or service renewal page
-- I want to explore bootstrap styling and have my individual resource cards lay out side-by-side instead of stacked on the index page.
 - I want to add mobile compatibility to the application.
 - I would like to adjust my User schema to include location and other pertinent information for the User's profile page.
 - I want to add an auto-renew field to the Renewal schema, that will be set to true/false.
 
-## Images
-![Perennial App](https://user-images.githubusercontent.com/59749085/93626999-4841fb00-f9b2-11ea-9071-871391b79d3d.png)
 
 #### ERD:
 ![Perennial ERD](https://user-images.githubusercontent.com/59749085/93627672-462c6c00-f9b3-11ea-9ef0-f909103ab283.jpg)
