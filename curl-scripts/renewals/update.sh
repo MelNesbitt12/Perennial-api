@@ -14,6 +14,7 @@ curl "${API}${URL_PATH}/${ID}" \
       "type": "'"${TYPE}"'",
       "date": "'"${DATE}"'",
       "cost": "'"${COST}"'",
+      "autoRenew": "'"${AUTORENEW}"'",
       "url": "'"${URL}"'",
       "instructions": "'"${INSTRUCTIONS}"'"
     }
