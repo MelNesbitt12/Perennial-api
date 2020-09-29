@@ -17,6 +17,11 @@ const renewalSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+  autoRenew: {
+    type: Boolean,
+    required: false,
+    default: false
+  },
   url: {
     type: String,
     required: true
